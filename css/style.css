@@ -1,0 +1,2056 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+      
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-image:
+        linear-gradient(
+            rgba(248, 241, 231, 0.65),
+            rgba(248, 241, 231, 0.82)
+        ),
+        url("../assets/images/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #5b4636;
+    line-height: 1.7;
+}
+
+/* ========================================
+   COVER / HALAMAN PEMBUKA
+======================================== */
+
+
+.cover {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+.cover::before {
+    top: -70px;
+    left: -70px;
+}
+
+.cover::after {
+    bottom: -70px;
+    right: -70px;
+}
+
+
+.cover-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+
+    animation: fadeIn 1.5s ease;
+}
+
+.subtitle {
+    letter-spacing: 4px;
+    font-size: 13px;
+    color: #a47c45;
+    margin-bottom: 20px;
+}
+
+
+.cover h1 {
+    font-size: clamp(45px, 10vw, 80px);
+    font-weight: normal;
+
+    line-height: 1.15;
+
+    color: #5b4636;
+
+    margin-bottom: 20px;
+}
+
+
+.cover h1 span {
+    font-size: 35px;
+    color: #b6925a;
+}
+
+
+.date {
+    font-size: 18px;
+    color: #80654d;
+
+    margin-bottom: 35px;
+}
+
+
+.guest {
+    font-size: 15px;
+
+    color: #6d5745;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+button {
+    border: none;
+
+    background: #a47c45;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    background: #806039;
+
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   EFEK DENYUT BIRU LANGIT
+======================================== */
+
+#openInvitation {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(173, 216, 255, 0.9);
+
+    box-shadow:
+        0 0 10px rgba(135, 206, 250, 0.4),
+        0 0 22px rgba(135, 206, 250, 0.25);
+
+    animation: buttonGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes buttonGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 8px rgba(135, 206, 250, 0.3),
+            0 0 16px rgba(135, 206, 250, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 18px rgba(135, 206, 250, 0.85),
+            0 0 35px rgba(100, 190, 255, 0.6),
+            0 0 50px rgba(173, 216, 255, 0.3);
+    }
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+#mainContent {
+    display: none;
+ 
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
+
+}
+
+.hero h2 {
+    font-size: clamp(38px, 8vw, 70px);
+
+    font-weight: normal;
+
+    color: #5b4636;
+
+    margin-bottom: 20px;
+}
+.hero h2.ridho-title {
+    font-size: 20px !important;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.hero h2 span {
+    color: #b6925a;
+    margin: 0 10px;
+}
+
+
+ /* ========================================
+   SECTION / SLIDE
+======================================== */
+
+.section {
+    max-width: 900px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 90px 25px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+/* ========================================
+   EFEK SLIDE HALAMAN
+======================================== */
+
+/* ========================================
+   ANIMASI HALAMAN LEBIH SMOOTH
+======================================== */
+
+.section {
+    opacity: 0.85;
+    transform: scale(0.98);
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
+}
+
+.section:hover {
+    opacity: 1;
+}
+
+.section h2 {
+    font-size: 32px;
+
+    font-weight: normal;
+
+    color: #5b4636;
+
+    margin-bottom: 25px;
+}
+
+
+.section p {
+    max-width: 650px;
+
+    margin: 0 auto 15px;
+}
+
+
+/* ========================================
+   COUPLE
+======================================== */
+/* =========================
+   FOTO MEMPELAI
+========================= */
+
+.couple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.person {
+    width: 220px;
+    text-align: center;
+}
+
+.and {
+    font-size: 40px;
+    font-family: serif;
+    text-align: center;
+    flex-shrink: 0;
+    color: #b6925a;
+}
+
+.couple-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+.groom-photo {
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+.groom-person {
+    transform: translateY(15px);
+}
+
+.person h3 {
+    font-size: 24px;
+
+    font-weight: normal;
+
+    margin-bottom: 10px;
+}
+#groomName {
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+
+.and {
+    font-size: 40px;
+
+    color: #b6925a;
+}
+
+
+/* ========================================
+   COUNTDOWN
+======================================== */
+
+.countdown-section {
+    background: rgba(239, 227, 210, 0.45);
+
+    max-width: 100%;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+
+.countdown div {
+    width: 90px;
+
+    padding: 18px 10px;
+
+    background: rgba(255,255,255,0.55);
+
+    border-radius: 12px;
+}
+
+
+.countdown span {
+    display: block;
+
+    font-size: 30px;
+
+    color: #8a673d;
+}
+
+
+.countdown small {
+    color: #80654d;
+}
+
+
+/* ========================================
+   EVENT
+======================================== */
+
+.event {
+    max-width: 550px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,0.45);
+
+    border-radius: 15px;
+}
+
+
+.event h3 {
+    color: #9a7241;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   CLOSING
+======================================== */
+
+.closing {
+    padding-bottom: 120px;
+}
+
+
+.closing h2 {
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .cover {
+        padding: 20px;
+    }
+
+
+    .cover h1 {
+        font-size: 48px;
+    }
+
+
+    .couple {
+        flex-direction: column;
+
+       gap: 30px;
+    }
+
+
+    .and {
+        font-size: 30px;
+        transform: none;
+    }
+#groomName {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+.hero h2.ridho-title {
+    font-size: 18px !important;
+}
+
+    .section {
+        padding: 70px 20px;
+    }
+
+
+    .countdown div {
+        width: 75px;
+    }
+
+
+    .countdown span {
+        font-size: 24px;
+    }
+
+    
+
+.person {
+    width: 180px;
+}
+
+.couple-photo {
+    width: 170px;
+    height: 240px;
+}
+.quote-arab h1 {
+    font-size: 23px;
+    line-height: 2;
+}
+
+.quote-arab h5 {
+    font-size: 15px;
+    line-height: 1.8;
+}
+}
+
+/* ========================================
+   EFEK SLIDE HALAMAN UNDANGAN
+======================================== */
+
+/* ========================================
+   EFEK SECTION MENYAMBUNG
+======================================== */
+
+.slide-page {
+    opacity: 0.45;
+    filter: blur(5px);
+    transform: scale(0.98);
+
+    transition:
+        opacity 0.7s ease,
+        filter 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* SECTION YANG SEDANG TERLIHAT */
+
+.slide-page.active {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+
+/* SECTION SEBELUMNYA */
+
+.slide-page.before {
+    opacity: 0.45;
+    filter: blur(5px);
+    transform: translateY(-25px) scale(0.98);
+}
+
+
+/* SECTION BERIKUTNYA */
+
+.slide-page.after {
+    opacity: 0.45;
+    filter: blur(5px);
+    transform: translateY(25px) scale(0.98);
+}
+
+/* ========================================
+   AYAT PERNIKAHAN
+======================================== */
+
+.quote-section {
+    text-align: center;
+}
+
+.quote-arab {
+    max-width: 800px;
+    margin: 30px auto 0;
+}
+
+.quote-arab h1 {
+    font-size: 30px;
+    line-height: 2;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.quote-arab h5 {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.9;
+    font-weight: normal;
+    color: #6b5747;
+}
+
+.quote-source {
+    margin-top: 25px;
+    font-size: 14px;
+    font-style: italic;
+    color: #8a6f55;
+}
+
+/* ========================================
+   DETAIL ACARA
+======================================== */
+
+.event {
+    max-width: 500px;
+    width: 100%;
+    margin: 25px auto;
+    padding: 30px 25px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    border: 1px solid rgba(138, 111, 85, 0.25);
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(91, 70, 54, 0.08);
+}
+
+.event h3 {
+    margin-bottom: 18px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    color: #7a5c42;
+}
+
+.event p {
+    margin: 6px 0;
+
+    font-size: 16px;
+    color: #6b5747;
+}
+
+.event p:first-of-type {
+    font-weight: bold;
+    color: #5b4636;
+}
+
+
+/* ========================================
+   KARTU LOKASI GOOGLE MAPS
+======================================== */
+
+.maps-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    width: 260px;
+
+    margin: 35px auto 0;
+    padding: 15px 20px;
+
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    border: 1px solid rgba(138, 111, 85, 0.3);
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 20px rgba(91, 70, 54, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.maps-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(91, 70, 54, 0.15);
+}
+
+.maps-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    animation: locationMove 1.8s ease-in-out infinite;
+}
+
+.maps-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    animation: locationMove 1.8s ease-in-out infinite;
+}
+
+/* ========================================
+   ICON LOCATION CSS
+======================================== */
+
+.location-pin {
+    width: 32px;
+    height: 32px;
+
+    background: #aa2109;
+
+    border-radius: 50% 50% 50% 0;
+
+    transform: rotate(-45deg);
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 5px 12px rgba(211, 23, 10, 0.797);
+}
+
+.location-dot {
+    width: 11px;
+    height: 11px;
+
+    background: #d2ddddb2;
+
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+/* ========================================
+   ANIMASI ICON LOKASI
+======================================== */
+
+@keyframes locationMove {
+
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    25% {
+        transform: translateY(-6px) scale(1.03);
+    }
+
+    50% {
+        transform: translateY(0) scale(1);
+    }
+
+    75% {
+        transform: translateY(-3px) scale(1.02);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+.maps-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.maps-text strong {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #6b5038;
+}
+
+.maps-text span {
+    font-size: 13px;
+    color: #8a7562;
+    margin-top: 2px;
+}
+
+/* ========================================
+   ICON MAPS AKAD & RESEPSI
+======================================== */
+
+/* ========================================
+   TOMBOL MAPS AKAD & RESEPSI
+======================================== */
+
+.maps-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid rgba(138, 111, 85, 0.3);
+
+    border-radius: 10px;
+
+    color: #6b5038;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 15px rgba(91, 70, 54, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* EFEK SAAT DISENTUH */
+.maps-button:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 8px 20px rgba(91, 70, 54, 0.15);
+}
+/* PIN MERAH */
+.location-pin-small {
+    width: 20px;
+    height: 20px;
+
+    background: #e53935 !important;
+
+    border-radius: 50% 50% 50% 0;
+
+    transform: rotate(-45deg);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 3px 7px rgba(229, 57, 53, 0.25);
+
+    animation: locationMoveSmall 1.8s ease-in-out infinite;
+}
+
+/* TITIK TENGAH */
+.location-dot-small {
+    width: 7px;
+    height: 7px;
+
+    background: #f8f1e7;
+
+    border-radius: 50%;
+}
+
+/* ANIMASI */
+@keyframes locationMoveSmall {
+
+    0% {
+        transform: rotate(-45deg) translateY(0) scale(1);
+    }
+
+    25% {
+        transform: rotate(-45deg) translateY(-3px) scale(1.05);
+    }
+
+    50% {
+        transform: rotate(-45deg) translateY(0) scale(1);
+    }
+
+    75% {
+        transform: rotate(-45deg) translateY(-2px) scale(1.03);
+    }
+
+    100% {
+        transform: rotate(-45deg) translateY(0) scale(1);
+    }
+}
+/* ========================================
+   PETUNJUK SCROLL
+======================================== */
+
+.scroll-hint {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+
+    width: 42px;
+    height: 42px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    color: #8a673d;
+
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(138, 111, 85, 0.25);
+    border-radius: 50%;
+
+    z-index: 9999;
+
+    box-shadow: 0 5px 15px rgba(91, 70, 54, 0.12);
+
+    animation: scrollArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollArrow {
+
+    0% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(6px);
+    }
+
+    100% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+
+}
+/* ========================================
+   DEKORASI DAUN SETIAP SLIDE
+======================================== */
+
+.slide-page {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Daun kiri atas */
+.slide-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 200px;
+
+    left: -100px;
+    top: -20px;
+
+    background-image: url("../assets/images/daun.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    opacity: 0.45;
+
+    pointer-events: none;
+    z-index: 0;
+
+    animation: daunKiri 8s ease-in-out infinite;
+}
+
+
+/* Daun kanan bawah */
+.slide-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 200px;
+
+    right: -100px;
+    bottom: -20px;
+
+    background-image: url("../assets/images/daun.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.45;
+
+    pointer-events: none;
+    z-index: 0;
+
+    /* BALIK KIRI-KANAN + ATAS-BAWAH */
+    transform: rotate(180deg);
+
+    /* sementara dimatikan */
+    animation: daunKanan 9s ease-in-out infinite;
+}
+
+/* ========================================
+   ANIMASI DAUN
+======================================== */
+
+
+/* ========================================
+   DEKORASI DAUN PNG PADA HALAMAN UNDANGAN
+======================================== */
+
+.hero,
+.section,
+.slide-page {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* Daun kiri atas */
+.hero::before,
+.section::before,
+.slide-page::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 180px;
+    left: -65px;
+    top: -15px;
+
+    background-image: url("../assets/images/daun.png");
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 0;
+
+    animation: daunKiri 8s ease-in-out infinite;
+}
+
+/* Daun kanan bawah */
+.hero::after,
+.section::after,
+.slide-page::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 180px;
+    right: -65px;
+    bottom: -15px;
+
+    background-image: url("../assets/images/daun.png");
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 0;
+
+    animation: daunKanan 9s ease-in-out infinite;
+}
+
+/* Pastikan isi undangan berada di depan daun */
+.hero > *,
+.section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animasi daun */
+@keyframes daunKiri {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(8px, 6px) rotate(2deg);
+    }
+}
+
+@keyframes daunKanan {
+    0%, 100% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    50% {
+        transform: rotate(180deg) translate(-8px, 5px);
+    }
+}
+
+.hero h2.ridho-title {
+    font-size: 10px !important;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+/* ========================================
+   BINGKAI CAHAYA BERGERAK PADA COVER
+======================================== */
+
+.cover {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Bingkai cahaya utama */
+.cover::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    border-radius: 20px;
+
+    background:
+        conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            rgba(255, 255, 255, 0.15) 35deg,
+            rgba(181, 145, 111, 0.75) 70deg,
+            rgba(255, 238, 213, 0.95) 90deg,
+            rgba(181, 145, 111, 0.4) 120deg,
+            transparent 160deg,
+            transparent 360deg
+        );
+
+    padding: 2px;
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    mask-composite: exclude;
+
+    animation: frameLight 8s linear infinite;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* Cahaya lembut / efek smoky */
+.cover::after {
+    content: "";
+
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    border: 1px solid rgba(190, 157, 130, 0.25);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 12px rgba(190, 157, 130, 0.25),
+        0 0 30px rgba(190, 157, 130, 0.18),
+        inset 0 0 25px rgba(190, 157, 130, 0.08);
+
+    animation: smokyGlow 4s ease-in-out infinite;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* ========================================
+   CAHAYA BERPUTAR MENGELILINGI COVER
+======================================== */
+
+@keyframes frameLight {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ========================================
+   EFEK ASAP / GLOW LEMBUT
+======================================== */
+
+@keyframes smokyGlow {
+
+    0% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.01);
+    }
+
+    100% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+
+}
+
+/* Animasi huruf pada tombol buka undangan */
+
+#openInvitation {
+    animation:
+        buttonGlow 2.5s ease-in-out infinite,
+        textAppear 0.8s ease-out both;
+    animation-delay: 0s, 0.3s;
+}
+
+@keyframes textAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+        letter-spacing: 5px;
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 2px;
+        filter: blur(0);
+    }
+}
+
+
+/* Animasi huruf digital berulang */
+
+#openInvitation .digital-letter {
+    display: inline-block;
+    opacity: 0;
+    animation: digitalLetterLoop 1.8s ease-in-out infinite;
+}
+
+@keyframes digitalLetterLoop {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px);
+        filter: blur(4px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(3px);
+        filter: blur(0);
+    }
+
+    40%, 75% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(12px);
+        filter: blur(4px);
+    }
+}
+
+/* ========================================
+   HALAMAN UCAPAN DAN BUKU TAMU
+======================================== */
+
+.guestbook-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.guestbook-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.guestbook-subtitle {
+    color: #a47c45;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.guestbook-title {
+    font-size: clamp(30px, 6vw, 42px);
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.guestbook-description {
+    max-width: 520px;
+    margin: 0 auto 30px;
+    font-size: 14px;
+}
+
+.guestbook-form {
+    text-align: left;
+    padding: 25px;
+    border: 1px solid rgba(164, 124, 69, 0.25);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 25px rgba(91, 70, 54, 0.06);
+}
+
+.guestbook-field {
+    margin-bottom: 18px;
+}
+
+.guestbook-field label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.guestbook-field input,
+.guestbook-field select,
+.guestbook-field textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(91, 70, 54, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #5b4636;
+    font: inherit;
+    font-size: 14px;
+}
+
+.guestbook-field textarea {
+    resize: vertical;
+}
+
+.guestbook-field input:focus,
+.guestbook-field select:focus,
+.guestbook-field textarea:focus {
+    outline: none;
+    border-color: #a47c45;
+    box-shadow: 0 0 0 3px rgba(164, 124, 69, 0.12);
+}
+
+.guestbook-submit {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.guestbook-notice {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.guestbook-list-area {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.guestbook-list-area h3 {
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#guestbookCount {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.guestbook-list {
+    display: grid;
+    gap: 14px;
+}
+
+.guestbook-card {
+    padding: 18px;
+    border-left: 3px solid #a47c45;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.55);
+    overflow-wrap: anywhere;
+}
+
+.guestbook-card h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.guestbook-attendance {
+    display: inline-block;
+    color: #8b6a3e;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.guestbook-card p {
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 480px) {
+    .guestbook-section {
+        padding: 50px 15px;
+    }
+
+    .guestbook-form {
+        padding: 18px;
+    }
+}
+
+/* ========================================
+   TOMBOL BUKA FORM UCAPAN
+======================================== */
+
+.guestbook-toggle {
+    width: 100%;
+    max-width: 340px;
+    margin: 15px auto 25px;
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: linear-gradient(135deg, #b99a68, #806344);
+    color: #fffaf0;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+
+    box-shadow: 0 8px 20px rgba(91, 70, 54, 0.15);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guestbook-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(91, 70, 54, 0.22);
+}
+
+.guestbook-toggle-icon {
+    font-size: 20px;
+}
+
+.guestbook-toggle-arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Panah berputar ketika form dibuka */
+
+.guestbook-toggle.is-open .guestbook-toggle-arrow {
+    transform: rotate(180deg);
+}
+
+/* Sembunyikan form jika belum dibuka */
+
+#guestbookForm[hidden] {
+    display: none !important;
+}
+
+/* Animasi saat form muncul */
+
+#guestbookForm:not([hidden]) {
+    display: block;
+    animation: guestbookOpen 0.45s ease both;
+}
+
+@keyframes guestbookOpen {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* AREA GULIR DAFTAR UCAPAN TAMU */
+.guestbook-list {
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px 10px 5px 5px;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+}
+
+/* Agar setiap ucapan tersusun rapi */
+.guestbook-card {
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* Tampilan scrollbar */
+.guestbook-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.guestbook-list::-webkit-scrollbar-thumb {
+    background: #b99a68;
+    border-radius: 10px;
+}
+
+.guestbook-list::-webkit-scrollbar-track {
+    background: #f1e7d8;
+    border-radius: 10px;
+}
+
+/* ========================================
+   KARTU DIGITAL ANIMASI
+======================================== */
+
+.digital-card-section {
+    padding: 70px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.digital-card-subtitle {
+    color: #b99a68;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.digital-card-title {
+    color: #5b4636;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.digital-card-description {
+    color: #786657;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 360px;
+    margin: 0 auto 25px;
+}
+
+.digital-card-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 22px;
+    border: 1px solid #b99a68;
+    border-radius: 30px;
+    background: #fffaf3;
+    color: #70553b;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.digital-card-toggle:hover {
+    background: #b99a68;
+    color: white;
+    box-shadow: 0 5px 20px #b99a6840;
+}
+
+.digital-card-content {
+    max-width: 390px;
+    margin: 30px auto 0;
+}
+
+.digital-card-content[hidden] {
+    display: none !important;
+}
+
+.digital-card-content:not([hidden]) {
+    animation: digitalCardReveal 0.7s ease both;
+}
+
+@keyframes digitalCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Tampilan kartu */
+.digital-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.586 / 1;
+    box-sizing: border-box;
+    padding: 24px;
+    overflow: hidden;
+    text-align: left;
+    color: #fff4dc;
+    border: 1px solid #d9bd83;
+    border-radius: 18px;
+    background:
+        radial-gradient(ellipse at 10% 10%, #a88a59 0%, transparent 40%),
+        linear-gradient(135deg, #3e3026, #171b1a 55%, #665037);
+    box-shadow: 0 18px 45px #34251e38;
+    animation: digitalCardFloat 4s ease-in-out infinite;
+}
+
+.digital-card-glow {
+    position: absolute;
+    top: -60%;
+    left: -80%;
+    width: 55%;
+    height: 220%;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ffffff10,
+        #fff5d98c,
+        #ffffff12,
+        transparent
+    );
+    transform: rotate(25deg);
+    animation: digitalCardShine 5s ease-in-out infinite;
+}
+
+@keyframes digitalCardShine {
+    0%, 15% {
+        left: -80%;
+    }
+    65%, 100% {
+        left: 140%;
+    }
+}
+
+@keyframes digitalCardFloat {
+    0%, 100% {
+        transform: translateY(0) rotateX(0deg);
+    }
+    50% {
+        transform: translateY(-7px) rotateX(2deg);
+    }
+}
+
+.digital-card-top,
+.digital-card-bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.digital-card-brand {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.digital-card-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 29px;
+    color: #56432c;
+    font-size: 24px;
+    border: 1px solid #e0c58d;
+    border-radius: 7px;
+    background: linear-gradient(135deg, #f5dfaa, #b38b4e);
+}
+
+.digital-card-middle {
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+}
+
+.digital-card-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #d7c5a5;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.digital-card-number {
+    font-size: clamp(14px, 4vw, 20px);
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.digital-card-bottom {
+    margin-top: 25px;
+}
+
+.digital-card-holder {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.digital-card-logo {
+    color: #e3c58e;
+    font-size: 35px;
+}
+
+.digital-card-note {
+    margin-top: 20px;
+    color: #786657;
+    font-size: 12px;
+}
+
+.digital-card-toggle.is-open {
+    background: #b99a68;
+    color: white;
+}
+
+@media (max-width: 420px) {
+    .digital-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .digital-card-middle {
+        margin-top: 20px;
+    }
+
+    .digital-card-bottom {
+        margin-top: 20px;
+    }
+
+    .digital-card-number {
+        letter-spacing: 1px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .digital-card,
+    .digital-card-glow {
+        animation: none;
+    }
+}
+
+/* ========================================
+   TOMBOL CD PINDAH UNDANGAN
+======================================== */
+
+.cd-switch {
+    position: fixed;
+    right: 18px;
+    bottom: 25px;
+    z-index: 9999;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    background: conic-gradient(
+        #d8c9a8,
+        #fff7e5,
+        #8c806d,
+        #f8efd9,
+        #d8c9a8
+    );
+
+    border: 2px solid #fff8e8;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+
+    animation: cdBerputar 4s linear infinite;
+}
+
+/* Bentuk CD */
+.cd-switch::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #5b4636;
+    border: 3px solid #f8f1e7;
+}
+
+/* Efek lingkaran CD */
+.cd-switch::after {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border-radius: 50%;
+    border: 1px solid rgba(91, 70, 54, 0.45);
+}
+
+@keyframes cdBerputar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efek saat disentuh */
+.cd-switch:hover {
+    scale: 1.08;
+}
+/* Langsung tampilkan isi undangan jika dibuka dari tombol CD */
+html.langsung-buka #cover {
+    display: none !important;
+}
+
+html.langsung-buka #mainContent {
+    display: block !important;
+}
+
+html.langsung-buka body {
+    overflow: auto !important;
+}
+
+
+/* TULISAN DI DALAM CD */
+.cd-switch {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+
+/* TULISAN GANTI MUSIK MELINGKAR */
+.cd-switch-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.cd-switch-text text {
+    fill: #3b3ee0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 9.0px;
+}
+/* CD disembunyikan saat cover pertama */
+#cdSwitch {
+    display: none;
+}
+
+
+/* ========================================
+   BINGKAI DAUN KHUSUS HALAMAN KEDUA
+======================================== */
+
+body.halaman-kedua::before,
+body.halaman-kedua::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    background-image: url("../assets/images/bingkai-daun-kedua.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Bingkai sisi kiri */
+body.halaman-kedua::before {
+    left: 0;
+    background-position: left center;
+}
+
+/* Bingkai sisi kanan */
+body.halaman-kedua::after {
+    right: 0;
+    background-position: right center;
+    transform: scaleX(-1);
+}
+
+/* Penyesuaian untuk HP */
+@media (max-width: 600px) {
+    body.halaman-kedua::before,
+    body.halaman-kedua::after {
+        width: 75px;
+    }
+}
+
+
+/* ========================================
+   DAUN KHUSUS HALAMAN KEDUA
+======================================== */
+
+/* Ganti daun lama pada seluruh dekorasi halaman kedua */
+body.halaman-kedua .hero::before,
+body.halaman-kedua .section::before,
+body.halaman-kedua .slide-page::before {
+    background-image: url("../assets/images/bingkai-daun-kedua.png") !important;
+}
+
+body.halaman-kedua .hero::after,
+body.halaman-kedua .section::after,
+body.halaman-kedua .slide-page::after {
+    background-image: url("../assets/images/bingkai-daun-kedua.png") !important;
+}
+
+
+/* KHUSUS DEKORASI HALAMAN KEDUA */
+body.undangan-kedua .hero::before,
+body.undangan-kedua .hero::after,
+body.undangan-kedua .section::before,
+body.undangan-kedua .section::after,
+body.undangan-kedua .slide-page::before,
+body.undangan-kedua .slide-page::after {
+    background-image: url("../assets/images/bingkai-daun-kedua.png") !important;
+     background-size: 210px auto !important;
+}
+
+/* WATERMARK DI AKHIR UNDANGAN */
+.watermark-undangan {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    text-align: center;
+    background: #f8f1e7;
+    color: #9c8978;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.75;
+}
+
+.watermark-undangan small {
+    display: block;
+    margin-top: 6px;
+    font-size: 9px;
+    letter-spacing: 1.0px;
+}
+#coverGroom,
+#coverBride {
+
+    font-size: 50px;
+}
+
+#coverAmpersand {
+    
+    font-size: 45px;
+}
+.nama-penutup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.nama-penutup span {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+}
+
+.nama-penutup .ampersand {
+    font-size: 20px;
+}
+.nama-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    width: 100%;
+}
+
+.nama-cover #coverGroom,
+.nama-cover #coverBride {
+    color: #5B4636;
+    font-size: 37px;
+    line-height: 1.3;
+}
+
+
+.nama-cover #coverAmpersand {
+    color: #5B4636;
+    font-size: 32px;
+    line-height: 1;
+}
+.shalawat {
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.bismillah {
+    font-size: 25px !important;
+    line-height: 1.8;
+    text-align: center;
+    font-weight: normal;
+}
