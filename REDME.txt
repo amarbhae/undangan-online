@@ -1,0 +1,25 @@
+#yang belum
+>setting tanggal manual di halaman 1 dan 2 manual di index dan halaman undangan kedua y
+>tanggal sesuaikan untuk coundown waktu  y
+>alamat lengkap dan nama tempat di form resepsi dan akad nikah y
+>halaman ketiga y 
+>pekecil bismillah di cover pertama y
+>perkecil sholawat di halaman 1 dan 2 y
+>menambahkan kata kami yang berbhagia di bagian akhir halaman y
+>memberikan kata mempelai peria atau wanita
+>Pastikan tanggal foto preview , nama yang di undang saat membagikan
+>Membuat kata kata berjalan dari ujung kanan ke kiri
+>merapihkan tampilan gambar mempelai agar posisinya rata di tengah 
+>reset ucapan dari firebase
+>rubah tombol ganti musiknya menjadi popup 3 warna berbeda setiap halaman 
+>musik di halaman ketiga terputar otomatis saat dipindahkan
+CARA MEMBESIHKAN RIWAYAT lwat consol
+>tes tampilan di hp
+
+localStorage.clear();
+sessionStorage.clear();
+location.reload(); 
+
+
+
+
