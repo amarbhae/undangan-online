@@ -6,15 +6,24 @@
 >pekecil bismillah di cover pertama y
 >perkecil sholawat di halaman 1 dan 2 y
 >menambahkan kata kami yang berbhagia di bagian akhir halaman y
->memberikan kata mempelai peria atau wanita
->Pastikan tanggal foto preview , nama yang di undang saat membagikan
->Membuat kata kata berjalan dari ujung kanan ke kiri
->merapihkan tampilan gambar mempelai agar posisinya rata di tengah 
->reset ucapan dari firebase
->rubah tombol ganti musiknya menjadi popup 3 warna berbeda setiap halaman 
->musik di halaman ketiga terputar otomatis saat dipindahkan
-CARA MEMBESIHKAN RIWAYAT lwat consol
->tes tampilan di hp
+>memberikan kata mempelai peria atau wanita y
+>Pastikan tanggal foto preview , nama yang di undang saat membagikan y
+>Membuat kata kata berjalan dari ujung kanan ke kiri y
+>merapihkan tampilan gambar mempelai agar posisinya rata di tengah y 
+>reset ucapan dari firebase y
+>rubah tombol ganti musiknya menjadi popup 3 warna berbeda setiap halaman y
+>musik di halaman ketiga terputar otomatis saat dipindahkan y
+>tes tampilan di hp y
+CARA MEMBESIHKAN RIWAYAT lwat consol y
+
+
+kata kata
+ول واجبات الحب إن تستمع
+Kewajiban pertama dalam cinta: engkau mendengarkan
+
+
+
+
 
 localStorage.clear();
 sessionStorage.clear();
